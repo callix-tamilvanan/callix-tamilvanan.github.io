@@ -54,7 +54,7 @@
     .container {
       max-width: 760px;
       margin: 0 auto;
-      padding: 100px 24px 60px;
+      padding: 80px 24px 60px;
       position: relative;
       z-index: 1;
     }
@@ -62,12 +62,12 @@
     .logo-wrap {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .logo {
-      width: 96px;
-      height: 96px;
+      width: 88px;
+      height: 88px;
       border-radius: 22px;
       background: linear-gradient(135deg, #001a2e, #1a0033);
       box-shadow:
@@ -76,9 +76,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 40px;
+      font-size: 38px;
       font-weight: 700;
-      background-clip: padding-box;
       animation: logoFloat 6s ease-in-out infinite;
     }
 
@@ -95,7 +94,7 @@
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.75rem;
       text-align: center;
       font-weight: 800;
       letter-spacing: -0.02em;
@@ -114,9 +113,24 @@
     .tagline {
       text-align: center;
       color: #8888a0;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       letter-spacing: 0.02em;
-      margin-bottom: 60px;
+      margin-bottom: 12px;
+    }
+
+    .version {
+      text-align: center;
+      color: #00d4ff;
+      font-size: 0.9rem;
+      margin-bottom: 48px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .version strong {
+      color: #ff00e5;
+      font-weight: 700;
     }
 
     h2 {
@@ -124,7 +138,7 @@
       text-transform: uppercase;
       letter-spacing: 0.3em;
       color: #00d4ff;
-      margin: 48px 0 20px;
+      margin: 40px 0 16px;
       font-weight: 600;
     }
 
@@ -143,6 +157,12 @@
     a:hover {
       color: #ff00e5;
       text-shadow: 0 0 12px rgba(255, 0, 229, 0.6);
+    }
+
+    .version-info {
+      color: #9090a0;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
     }
 
     .cta {
@@ -167,6 +187,36 @@
       text-shadow: none;
     }
 
+    .whats-new {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .whats-new li {
+      padding: 14px 18px;
+      margin-bottom: 10px;
+      background: rgba(0, 212, 255, 0.05);
+      border-left: 3px solid #00d4ff;
+      border-radius: 8px;
+      color: #b0b0c0;
+      line-height: 1.5;
+      font-size: 0.95rem;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .whats-new li:hover {
+      background: rgba(0, 212, 255, 0.1);
+      border-left-color: #ff00e5;
+    }
+
+    .whats-new li strong {
+      color: #e0e0e8;
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
     .links {
       display: flex;
       gap: 24px;
@@ -175,7 +225,7 @@
     }
 
     .footer {
-      margin-top: 80px;
+      margin-top: 60px;
       padding-top: 32px;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       color: #505060;
@@ -193,13 +243,43 @@
 
     <h1>Black Pulse</h1>
     <p class="tagline">A free and open-source music player for Android.</p>
+    <p class="version">Current version: <strong>v0.3.0</strong></p>
 
     <h2>Download</h2>
+    <p class="version-info">Latest: Black Pulse v0.3.0 — The ViMusic-Inspired Update</p>
     <p>
       <a class="cta" href="https://github.com/callix-tamilvanan/blackpulse/releases/latest">
         Get the latest release →
       </a>
     </p>
+
+    <h2>What's New in v0.3.0</h2>
+    <ul class="whats-new">
+      <li>
+        <strong>Vertical rail navigation</strong>
+        ViMusic-inspired layout with rotated text, transparent background, and 64dp width
+      </li>
+      <li>
+        <strong>Settings rail with 10 sections</strong>
+        About, Appearance, Player, Content, AI, Android Auto, Privacy, Storage, Backup, Updater — all inline
+      </li>
+      <li>
+        <strong>Dynamic Material You colors</strong>
+        Selected items use your wallpaper's accent color throughout the rail
+      </li>
+      <li>
+        <strong>Quick picks first on Home</strong>
+        With a fallback to random library songs when no data is available
+      </li>
+      <li>
+        <strong>Compact storage cards</strong>
+        Image cache and song cache cards redesigned for less clutter
+      </li>
+      <li>
+        <strong>Roman numerals in Settings rail</strong>
+        I–X marking each section in the vertical rail
+      </li>
+    </ul>
 
     <h2>About</h2>
     <p>
