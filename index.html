@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Black Pulse</title>
+  <link rel="icon" type="image/png" href="blackpulse-icon.png">
+  <link rel="apple-touch-icon" href="blackpulse-icon.png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -16,7 +18,6 @@
       overflow-x: hidden;
     }
 
-    /* Subtle paper grain texture */
     body::before {
       content: "";
       position: fixed;
@@ -29,12 +30,11 @@
       pointer-events: none;
     }
 
-    /* Music notation background pattern */
     body::after {
       content: "";
       position: fixed;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%238b6f47' stroke-width='0.8' opacity='0.13'%3E%3C!-- Staff lines --%3E%3Cline x1='0' y1='60' x2='400' y2='60'/%3E%3Cline x1='0' y1='70' x2='400' y2='70'/%3E%3Cline x1='0' y1='80' x2='400' y2='80'/%3E%3Cline x1='0' y1='90' x2='400' y2='90'/%3E%3Cline x1='0' y1='100' x2='400' y2='100'/%3E%3C!-- Note 1 --%3E%3Cellipse cx='60' cy='100' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='65' y1='98' x2='65' y2='40'/%3E%3C!-- Note 2 --%3E%3Cellipse cx='150' cy='90' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='155' y1='88' x2='155' y2='30'/%3E%3C!-- Note 3 --%3E%3Cellipse cx='260' cy='100' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='265' y1='98' x2='265' y2='40'/%3E%3C!-- Note 4 --%3E%3Cellipse cx='340' cy='80' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='345' y1='78' x2='345' y2='20'/%3E%3C!-- More staff --%3E%3Cline x1='0' y1='280' x2='400' y2='280'/%3E%3Cline x1='0' y1='290' x2='400' y2='290'/%3E%3Cline x1='0' y1='300' x2='400' y2='300'/%3E%3Cline x1='0' y1='310' x2='400' y2='310'/%3E%3Cline x1='0' y1='320' x2='400' y2='320'/%3E%3C!-- Notes --%3E%3Cellipse cx='100' cy='300' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='105' y1='298' x2='105' y2='240'/%3E%3Cellipse cx='220' cy='320' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='225' y1='318' x2='225' y2='260'/%3E%3Cline x1='225' y1='260' x2='280' y2='250'/%3E%3Cline x1='280' y1='250' x2='280' y2='295'/%3E%3Cellipse cx='275' cy='300' rx='6' ry='4' fill='%238b6f47'/%3E%3C/g%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%238b6f47' stroke-width='0.8' opacity='0.13'%3E%3Cline x1='0' y1='60' x2='400' y2='60'/%3E%3Cline x1='0' y1='70' x2='400' y2='70'/%3E%3Cline x1='0' y1='80' x2='400' y2='80'/%3E%3Cline x1='0' y1='90' x2='400' y2='90'/%3E%3Cline x1='0' y1='100' x2='400' y2='100'/%3E%3Cellipse cx='60' cy='100' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='65' y1='98' x2='65' y2='40'/%3E%3Cellipse cx='150' cy='90' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='155' y1='88' x2='155' y2='30'/%3E%3Cellipse cx='260' cy='100' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='265' y1='98' x2='265' y2='40'/%3E%3Cellipse cx='340' cy='80' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='345' y1='78' x2='345' y2='20'/%3E%3Cline x1='0' y1='280' x2='400' y2='280'/%3E%3Cline x1='0' y1='290' x2='400' y2='290'/%3E%3Cline x1='0' y1='300' x2='400' y2='300'/%3E%3Cline x1='0' y1='310' x2='400' y2='310'/%3E%3Cline x1='0' y1='320' x2='400' y2='320'/%3E%3Cellipse cx='100' cy='300' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='105' y1='298' x2='105' y2='240'/%3E%3Cellipse cx='220' cy='320' rx='6' ry='4' fill='%238b6f47'/%3E%3Cline x1='225' y1='318' x2='225' y2='260'/%3E%3Cline x1='225' y1='260' x2='280' y2='250'/%3E%3Cline x1='280' y1='250' x2='280' y2='295'/%3E%3Cellipse cx='275' cy='300' rx='6' ry='4' fill='%238b6f47'/%3E%3C/g%3E%3C/svg%3E");
       background-size: 400px 400px;
       z-index: -1;
       pointer-events: none;
@@ -215,7 +215,12 @@
       font-style: italic;
     }
 
-    /* Decorative flourish */
+    .footer strong {
+      font-weight: 700;
+      color: #3a2f22;
+      font-style: normal;
+    }
+
     .flourish {
       text-align: center;
       color: #8b6f47;
@@ -311,7 +316,7 @@
     </div>
 
     <div class="footer">
-      Made by Callix Tamilvanan · ♪
+      Made by <strong>Callix Tamilvanan</strong> · ♪
     </div>
   </div>
 </body>
