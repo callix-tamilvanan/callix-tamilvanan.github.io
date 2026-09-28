@@ -16,7 +16,6 @@
       position: relative;
     }
 
-    /* Animated background grid */
     body::before {
       content: "";
       position: fixed;
@@ -34,7 +33,6 @@
       100% { background-position: 60px 60px; }
     }
 
-    /* Soft glow blobs */
     body::after {
       content: "";
       position: fixed;
@@ -65,32 +63,19 @@
       margin-bottom: 32px;
     }
 
-    .logo {
-      width: 88px;
-      height: 88px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #001a2e, #1a0033);
+    .logo-image {
+      width: 112px;
+      height: 112px;
+      border-radius: 24px;
       box-shadow:
         0 0 40px rgba(0, 212, 255, 0.4),
         0 0 80px rgba(255, 0, 229, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 38px;
-      font-weight: 700;
       animation: logoFloat 6s ease-in-out infinite;
     }
 
     @keyframes logoFloat {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-8px); }
-    }
-
-    .logo span {
-      background: linear-gradient(90deg, #00d4ff, #ff00e5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.6));
     }
 
     h1 {
@@ -238,46 +223,46 @@
 <body>
   <div class="container">
     <div class="logo-wrap">
-      <div class="logo"><span>BP</span></div>
+      <img src="blackpulse-icon.png" alt="Black Pulse" class="logo-image">
     </div>
 
     <h1>Black Pulse</h1>
     <p class="tagline">A free and open-source music player for Android.</p>
-    <p class="version">Current version: <strong>v0.3.0</strong></p>
+    <p class="version">Current version: <strong>v0.4.0</strong></p>
 
     <h2>Download</h2>
-    <p class="version-info">Latest: Black Pulse v0.3.0 — The ViMusic-Inspired Update</p>
+    <p class="version-info">Latest: Black Pulse v0.4.0 — The Signed Release</p>
     <p>
       <a class="cta" href="https://github.com/callix-tamilvanan/blackpulse/releases/latest">
         Get the latest release →
       </a>
     </p>
 
-    <h2>What's New in v0.3.0</h2>
+    <h2>What's New in v0.4.0</h2>
     <ul class="whats-new">
       <li>
-        <strong>Vertical rail navigation</strong>
-        ViMusic-inspired layout with rotated text, transparent background, and 64dp width
+        <strong>Signed release build</strong>
+        First APK signed with the official Black Pulse keystore — no more debug builds
       </li>
       <li>
-        <strong>Settings rail with 10 sections</strong>
-        About, Appearance, Player, Content, AI, Android Auto, Privacy, Storage, Backup, Updater — all inline
+        <strong>New app icon</strong>
+        Sheet-music style BP monogram on paper texture, with a matching notification icon
       </li>
       <li>
-        <strong>Dynamic Material You colors</strong>
-        Selected items use your wallpaper's accent color throughout the rail
+        <strong>Last played song memory</strong>
+        The mini-player remembers your last track — reopen and it's there, paused
       </li>
       <li>
-        <strong>Quick picks first on Home</strong>
-        With a fallback to random library songs when no data is available
+        <strong>Notification fixes</strong>
+        Persistent Queue removed — notifications now clear properly when you close the app
       </li>
       <li>
-        <strong>Compact storage cards</strong>
-        Image cache and song cache cards redesigned for less clutter
+        <strong>All Settings sections inline</strong>
+        10 sections accessible via the Settings rail, no more navigating away
       </li>
       <li>
-        <strong>Roman numerals in Settings rail</strong>
-        I–X marking each section in the vertical rail
+        <strong>Search filter rail</strong>
+        All, Songs, Playlists, Artists, Albums, Videos, Podcasts — ViMusic-style layout
       </li>
     </ul>
 
@@ -285,7 +270,8 @@
     <p>
       Black Pulse is a fork of <a href="https://github.com/MetrolistGroup/Metrolist">Metrolist</a>,
       which is built on <a href="https://github.com/z-huang/InnerTune">InnerTune</a>.
-      It is licensed under GPL v3.0.
+      Design inspired by <a href="https://github.com/vfsfitvnm/ViMusic">ViMusic</a>.
+      Licensed under GPL v3.0.
     </p>
 
     <h2>Connect</h2>
